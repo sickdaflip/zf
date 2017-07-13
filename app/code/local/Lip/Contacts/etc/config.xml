@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Lip_Contacts>
+            <version>0.0.1</version>
+        </Lip_Contacts>
+    </modules>
+    <global>
+        <template>
+            <email>
+                <contacts_email_email_template>
+                    <type>text</type>
+                </contacts_email_email_template>
+            </email>
+        </template>
+    </global>
+</config>

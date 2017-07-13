@@ -1,0 +1,117 @@
+.searchautocomplete {
+  color: $primary-color;
+  .search-autocomplete {
+    width: 100%;
+    position: absolute;
+  }
+
+  .form-search {
+    overflow: none !important;
+    position: relative;
+  }
+
+  .sprite {
+    background: url('../../../images/mirasvit/sprite.png');
+  }
+
+  .nav-search-in {
+    border-top-left-radius: $global-radius !important;
+    border-bottom-left-radius: $global-radius !important;
+    position: absolute;
+    background-color: $light-gray;
+    left: 0px;
+    z-index: 11;
+    color: $dark-gray;
+    &:hover {
+      color: $primary-color !important;
+    }
+    .category {
+      border-top-left-radius: $global-radius !important;
+      border-bottom-left-radius: $global-radius !important;
+      opacity: 0;
+      cursor: pointer;
+      left: 0;
+      margin: 0;
+      outline: 0;
+      padding: 0;
+      position: absolute;
+      top: 0;
+      visibility: visible;
+      width: auto;
+      option {
+        color: $primary-color;
+      }
+    }
+
+    .category-fake {
+      border-top-left-radius: $global-radius !important;
+      border-bottom-left-radius: $global-radius !important;
+      cursor: pointer;
+      float: left;
+      padding: .3rem 25px .1rem .5rem;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .nav-down-arrow {
+      right: 10px;
+      top: 15px;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 4.5px 0 4.5px;
+      border-color: $dark-gray transparent transparent transparent;
+      line-height: 0px;
+    }
+  }
+
+  .searchautocomplete-placeholder {
+    position: absolute;
+    z-index: 999;
+    background-color: $white;
+    border-color: $primary-color;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    font-size: inherit;
+    ul {
+      li {
+        &.active {
+          border: $primary-color 1px solid;
+          cursor: pointer;
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .index-title {
+      text-align: right;
+      color: #0A263C;
+      border-bottom: 1px solid #CCC;
+      padding: 2px 5px;
+      background-color: #F7F7F6;
+      span {
+        color: #666;
+      }
+    }
+    .all {
+      text-align: right;
+      margin: 10px 10px 5px 10px;
+    }
+  }
+  .searchautocomlete-image {
+    float: left;
+    margin: 0px 5px 5px 0px;
+  }
+  .searchautocomplete-loader {
+    position: relative;
+    display: none;
+    i {
+      right: 5rem;
+      top: 0.5rem;
+      position: absolute;
+      color: $primary-color;
+    }
+  }
+}

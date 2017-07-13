@@ -1,0 +1,52 @@
+{
+  "name": "sickdaflip/zf",
+  "type": "magento-module",
+  "license": "MIT",
+  "description": "Magento 1.9.3. Theme",
+  "authors": [
+    {
+      "name": "Lip",
+      "email": "philippbreitsprecher@gmail.com"
+    }
+  ],
+  "extra": {
+    "map": [
+      [
+        "app/code/local/Gastrodax/*",
+        "app/code/local/Gastrodax/"
+      ],
+      [
+        "app/code/local/Mage/*",
+        "app/code/local/Mage/"
+      ],
+      [
+        "app/design/frontend/gd-theme/default",
+        "app/design/frontend/gd-theme/default"
+      ],
+      [
+        "app/etc/modules/*.xml",
+        "app/etc/modules/"
+      ],
+      [
+        "app/locale/de_DE/*",
+        "app/locale/de_DE/"
+      ],
+      [
+        "js/varien/product_options.js",
+        "js/varien/product_options.js"
+      ],
+      [
+        "media/catalog/brands/*",
+        "media/catalog/brands/"
+      ],
+      [
+        "skin/frontend/gd-theme/default/*",
+        "skin/frontend/gd-theme/default/"
+      ],
+      [
+        "favicon.ico",
+        "favicon.ico"
+      ]
+    ]
+  }
+}

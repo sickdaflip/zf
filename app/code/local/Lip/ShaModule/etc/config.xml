@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Lip_ShaModule>
+            <version>0.0.1</version>
+            <depends>
+                <Mage_Core />
+            </depends>
+        </Lip_ShaModule>
+    </modules>
+    <global>
+        <models>
+            <core>
+                <rewrite>
+                    <encryption>Lip_ShaModule_Model_Encryption</encryption>
+                </rewrite>
+            </core>
+        </models>
+        <helpers>
+            <core>
+                <encryption_model>Lip_ShaModule_Model_Encryption</encryption_model>
+            </core>
+        </helpers>
+    </global>
+
+    <frontend>
+        <routers>
+            <Lip_shamodule>
+                <use>standard</use>
+                <args>
+                    <module>Lip_ShaModule</module>
+                    <frontName>shamodule</frontName>
+                </args>
+            </Lip_shamodule>
+        </routers>
+    </frontend>
+</config>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Lip_AjaxContent>
+            <version>0.0.1</version>
+        </Lip_AjaxContent>
+    </modules>
+    <frontend>
+        <routers>
+            <ajaxcontent>
+                <use>standard</use>
+                <args>
+                    <module>Lip_AjaxContent</module>
+                    <frontName>ajax</frontName>
+                </args>
+            </ajaxcontent>
+        </routers>
+    </frontend>
+</config>

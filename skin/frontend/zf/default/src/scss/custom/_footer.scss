@@ -1,0 +1,140 @@
+.footer-container {
+  margin-top: 1em;
+  background-color: $white;
+  padding: 1em 0 0 0;
+  h5, h2 {
+    overflow: hidden;
+    text-align: center;
+    margin: 1rem 0;
+    color: $primary-color;
+    &:before, &:after {
+      background-color: $dark-gray;
+      content: "";
+      display: inline-block;
+      height: 1px;
+      position: relative;
+      vertical-align: middle;
+      width: 50%;
+    }
+    &:before {
+      right: 0.5em;
+      margin-left: -50%;
+    }
+    &:after {
+      left: 0.5em;
+      margin-right: -50%;
+    }
+  }
+  .footer_shipping {
+    .shippingfree {
+      @extend .text-center;
+      color: $primary-color;
+      font-size: 1.3rem;
+      line-height: 1;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      margin: 1rem 0 0 0;
+      span {
+        font-size: .9rem;
+        display: block;
+      }
+      @include breakpoint(medium only) {
+        font-size: 1.3rem;
+        font-weight: 500;
+        span {
+          font-size: 1rem;
+          display: block;
+        }
+      }
+      @include breakpoint(large only) {
+        font-size: 1.7rem;
+        font-weight: 500;
+        span {
+          font-size: 1.2rem;
+          display: block;
+        }
+      }
+      @include breakpoint(xlarge only) {
+        font-size: 2rem;
+        font-weight: 600;
+        span {
+          font-size: 1.5rem;
+          display: block;
+        }
+      }
+      @include breakpoint(xxlarge only) {
+        font-size: 2.5rem;
+        font-weight: 600;
+        span {
+          font-size: 1.7rem;
+          display: block;
+        }
+      }
+      &:before, &:after {
+        background: none;
+      }
+    }
+  }
+  .footer_manufactures {
+    margin-bottom: 1rem;
+  }
+}
+
+.copyright-container {
+  background-color: $light-gray;
+  border-top: 1px solid $dark-gray;
+  text-align: center;
+  .social {
+    margin-top: 1em;
+    ul {
+      li {
+        display: inline;
+        margin: .5rem;
+        a {
+          i {
+            font-size: 2rem;
+            color: $primary-color;
+          }
+          &:hover i, &:focus i {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+  .notification {
+    padding: 0;
+    p {
+      margin-bottom: 1em;
+      padding: 0;
+    }
+  }
+}
+
+.reasons {
+  @extend .show-for-large;
+  display: none;
+  position: fixed;
+  padding: .5em .5em .5em 1.5em;
+  left: 0;
+  top: 15em;
+  background-color: #00bbff;
+  margin-left: -1em;
+  border-radius: 3px;
+  span:first-child {
+    padding:0;
+    font-family: 'Open Sans';
+    color: #ffffff;
+    font-size: 3.5em;
+    font-weight: bold;
+    display: block;
+  }
+  span:nth-child(2n) {
+    display: block;
+    text-transform: uppercase;
+    font-family: 'Open Sans';
+    color: #ffffff;
+    font-size: .9em;
+  }
+}

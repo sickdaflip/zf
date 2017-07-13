@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Lip_Sitemap>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Lip_Sitemap>
+    </modules>
+</config>

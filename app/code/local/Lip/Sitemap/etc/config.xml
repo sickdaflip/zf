@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Lip_Sitemap>
+            <version>0.0.1</version>
+        </Lip_Sitemap>
+    </modules>
+    <global>
+        <models>
+            <lip_sitemap>
+                <class>Lip_Sitemap_Model</class>
+            </lip_sitemap>
+            <sitemap>
+                <rewrite>
+                    <sitemap>Lip_Sitemap_Model_Sitemap</sitemap>
+                </rewrite>
+            </sitemap>
+        </models>
+        <helpers>
+            <lip_sitemap>
+                <class>Lip_Sitemap_Helper</class>
+            </lip_sitemap>
+        </helpers>
+    </global>
+    <adminhtml>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <lip_sitemap>
+                                            <title>Lip Mage Tools Sitemap</title>
+                                        </lip_sitemap>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>

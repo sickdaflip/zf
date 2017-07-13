@@ -1,0 +1,90 @@
+<div class="footer-container">
+    <div class="footer">
+        <div class="footer_payments">
+            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_payments')->toHtml(); ?>
+        </div>
+        <div class="footer_shipping">
+            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_shipping')->toHtml(); ?>
+        </div>
+        <div class="footer_quality">
+            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_quality')->toHtml(); ?>
+        </div>
+        <div class="footer_links">
+            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_links')->toHtml(); ?>
+        </div>
+        <div class="footer_service">
+            <h5><?php echo $this->__('Kundenservice') ?></h5>
+            <ul>
+                <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_service')->toHtml(); ?>
+                <?php echo $this->getChildHtml('store_switcher', false) ?>
+            </ul>
+        </div>
+        <div class="footer_partner">
+            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_partner')->toHtml(); ?>
+        </div>
+        <div class="footer_manufactures">
+            <h2><?php echo $this->__('Unsere starken Gastro-Marken') ?></h2>
+            <?php echo $this->getChildHtml('footer.manufacture_list') ?>
+        </div>
+    </div>
+</div>
+<div class="copyright-container">
+    <div class="social">
+        <ul>
+            <li><a href="https://facebook.com/gastrodax/" target="_blank"><i class="fa fa-facebook-square"
+                                                                             aria-hidden="true"></i></a></li>
+            <li><a href="https://plus.google.com/+gastrodax" target="_blank"><i class="fa fa-google-plus-square"
+                                                                                aria-hidden="true"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCTr6z7_W4adeggGR1Sa717g" target="_blank"><i
+                            class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+            <li><a href="https://twitter.com/gastrodax" target="_blank"><i class="fa fa-twitter-square"
+                                                                           aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+    <div class="notification">
+        <p>
+            <small>Copyright <?php echo date("Y"); ?> <a href="http://www.newgastroline.de" rel="nofollow"
+                                                         target="_blank">New Gastroline GmbH</a> | All Rights Reserved
+            </small>
+        </p>
+    </div>
+</div>
+<div class="cookie-container">
+    <div class="message">
+        <p><?php echo $this->__('Wir verwenden Cookies, um Ihnen den bestmöglichen Service zu gewährleisten. Wenn Sie auf der Seite weitersurfen stimmen Sie der Cookie-Nutzung zu.') ?></p>
+    </div>
+    <div class="actions">
+        <div class="button-group">
+            <a class="button close-cookie">schließen</a>
+            <a class="button hollow"
+               href="<?php echo $this->getUrl('datenschutz') ?>"><?php echo $this->__('Datenschutzerklärung') ?></a>
+        </div>
+    </div>
+</div>
+<link rel="apple-touch-icon" sizes="57x57"
+      href="<?php echo $this->getSkinUrl('images/favicons/apple-touch-icon-57x57.png') ?>">
+<link rel="apple-touch-icon" sizes="60x60"
+      href="<?php echo $this->getSkinUrl('images/favicons/apple-touch-icon-60x60.png') ?>">
+<link rel="apple-touch-icon" sizes="72x72"
+      href="<?php echo $this->getSkinUrl('images/favicons/apple-touch-icon-72x72.png') ?>">
+<link rel="apple-touch-icon" sizes="76x76"
+      href="<?php echo $this->getSkinUrl('images/favicons/apple-touch-icon-76x76.png') ?>">
+<link rel="apple-touch-icon" sizes="114x114"
+      href="<?php echo $this->getSkinUrl('images/favicons/apple-touch-icon-114x114.png') ?>">
+<link rel="apple-touch-icon" sizes="120x120"
+      href="<?php echo $this->getSkinUrl('images/favicons/apple-touch-icon-120x120.png') ?>">
+<link rel="apple-touch-icon" sizes="144x144"
+      href="<?php echo $this->getSkinUrl('images/favicons/apple-touch-icon-144x144.png') ?>">
+<link rel="apple-touch-icon" sizes="152x152"
+      href="<?php echo $this->getSkinUrl('images/favicons/apple-touch-icon-152x152.png') ?>">
+<link rel="apple-touch-icon" sizes="180x180"
+      href="<?php echo $this->getSkinUrl('images/favicons/apple-touch-icon-180x180.png') ?>">
+<link rel="icon" type="image/png" sizes="32x32"
+      href="<?php echo $this->getSkinUrl('images/favicons/favicon-32x32.png') ?>">
+<link rel="icon" type="image/png" sizes="192x192"
+      href="<?php echo $this->getSkinUrl('images/favicons/android-chrome-192x192.png') ?>">
+<link rel="icon" type="image/png" sizes="96x96"
+      href="<?php echo $this->getSkinUrl('images/favicons/favicon-96x96.png') ?>">
+<link rel="icon" type="image/png" sizes="16x16"
+      href="<?php echo $this->getSkinUrl('images/favicons/favicon-16x16.png') ?>">
+<script src="<?php echo $this->getSkinUrl('js/app.js') ?>"></script>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Lip_Layout>
+            <version>0.0.1</version>
+        </Lip_Layout>
+        <depends>
+            <!-- no dependencies -->
+        </depends>
+    </modules>
+    <global>
+        <page>
+            <layouts>
+                <fullwidth_layout module="page" translate="label">
+                    <label>Volle Breite</label>
+                    <template>page/fullwidth.phtml</template>
+                    <layout_handle>fullwidth_layout</layout_handle>
+                </fullwidth_layout>
+                <home_layout module="page" translate="label">
+                    <label>Startseite</label>
+                    <template>page/1column-home.phtml</template>
+                    <layout_handle>home_layout</layout_handle>
+                </home_layout>
+            </layouts>
+        </page>
+        <blocks>
+            <page>
+                <rewrite>
+                    <html_topmenu>Lip_Layout_Block_Topmenu</html_topmenu>
+                </rewrite>
+            </page>
+        </blocks>
+        <helpers>
+            <layout>
+                <class>Lip_Layout_Helper</class>
+            </layout>
+        </helpers>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <Lip_Layout>
+                    <file>lip_layout.xml</file>
+                </Lip_Layout>
+            </updates>
+        </layout>
+    </frontend>
+</config>

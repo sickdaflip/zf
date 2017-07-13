@@ -1,0 +1,901 @@
+// MOBILE FIRST
+
+.demo-notice,
+.top-bar,
+.header-container,
+.nav-container,
+.footer-container,
+.copyright-container,
+.cookie-container,
+.col1-layout,
+.col2-left-layout,
+.col2-right-layout,
+.col3-layout,
+.breadcrumbs {
+  @include flex-grid-row(null, expand);
+}
+
+// Layout
+.col1-layout {
+  .col-main {
+    @include flex-grid-column(12);
+    .std {
+      .row {
+        max-width: 100%;
+      }
+    }
+    #catalog-filters {
+      @include flex-grid-column(12);
+      max-width: 100%;
+    }
+    #fme_layered_container {
+      @include flex-grid-column(12);
+      max-width: 100%;
+    }
+  }
+}
+
+.col2-left-layout,
+.col2-right-layout {
+  .sidebar,
+  .col-main {
+    @include flex-grid-column(12);
+  }
+}
+
+.col3-layout {
+  .col-wrapper {
+    @include flex-grid-row(nest);
+    .sidebar,
+    .col-main {
+      @include flex-grid-column(12);
+    }
+    > span {
+      @include flex-grid-column(6);
+    }
+  }
+}
+
+//Breadcrumbs
+.breadcrumbs {
+  ul {
+    @include flex-grid-column(12);
+  }
+}
+
+//Header
+.header-container {
+  @include flex-grid-row(null, 100%);
+  .header-top {
+    @include flex-grid-row(null, 95%);
+    .brand,
+    .hotline,
+    .search {
+      @include flex-grid-column(12);
+      @extend .text-center;
+      #search_mini_form {
+        position: relative;
+        .search-row {
+          @include flex-grid-row(null, 100%);
+          .search-input {
+            position: relative;
+            @include flex-grid-row(null, 100%);
+            padding: 0 !important;
+            @include flex-grid-column(11);
+          }
+          .search-button {
+            @include flex-grid-row(null, 100%);
+            padding: 0 !important;
+            @include flex-grid-column(1);
+          }
+        }
+      }
+    }
+    .brand {
+      @include flex-order(1);
+      margin-bottom: 0;
+    }
+    .hotline {
+      @include flex-order(2);
+      margin-bottom: $header-margin-bottom;
+    }
+    .search {
+      @include flex-order(3);
+      margin-bottom: $header-margin-bottom;
+    }
+  }
+  .header-bottom {
+    @include flex-grid-row(null, 95%);
+    @include flex-align(center, middle);
+    .nav {
+      @include flex-grid-column(4);
+    }
+    .trusted {
+      @extend .show-for-medium;
+    }
+    .account {
+      @include flex-grid-column(8);
+      .menu {
+        @extend .align-right;
+      }
+    }
+  }
+}
+
+//Nav
+.nav-container {
+  nav.top-bar {
+    @include flex-grid-row(null, 100%);
+  }
+}
+
+//Catalog
+.products-list {
+  li {
+    a,
+    .product-shop {
+      @include flex-grid-column(12);
+    }
+  }
+}
+
+.toolbar, .toolbar-3, .pager {
+  @include flex-grid-row(nest);
+  @include flex-align(center, middle);
+  .amount, .limiter, .pages, .sort-by {
+    @include flex-grid-column(12);
+  }
+}
+
+.categories-grid {
+  @include flex-grid-row(null, expand);
+  @include flex-grid-layout(2, 'li');
+  @include flex-align(center, middle);
+  li {
+    @include flex-grid-column(6, 2rem);
+    text-align: center;
+  }
+}
+
+.products-grid, .search-grid {
+  @include flex-grid-row(null, expand);
+  @include flex-grid-layout(1, 'li');
+  @include flex-align(center, top);
+  .item {
+    padding: 0 0.3rem;
+  }
+}
+
+.search-autocomplete {
+  ul {
+    @include flex-grid-row(null, expand);
+    @include flex-align(center, top);
+    li {
+      @include flex-grid-column(6, 1rem);
+    }
+  }
+}
+
+.manufacture-grid {
+  @include flex-grid-row(null, expand);
+  @include flex-align(center, middle);
+  li {
+    @include flex-grid-column(6);
+    img {
+      @extend .thumbnail;
+    }
+  }
+}
+
+.payment-grid {
+  @include flex-grid-row(null, expand);
+  @include flex-align(center, middle);
+  .method {
+    @include flex-grid-column(12, 1rem);
+  }
+}
+
+//Product
+.product-view {
+  .product-essential {
+    #product_addtocart_form {
+      @include flex-grid-row(nest);
+      .product-img-box,
+      .product-shop {
+        @include flex-grid-column(12);
+        .product-header {
+          @include flex-grid-row(nest);
+          .product-name, .product-brand {
+            @include flex-grid-column(12);
+          }
+        }
+        .add-to-cart {
+          @include flex-grid-row(null, expand);
+          @include flex-align(center, middle);
+          label {
+            display: none;
+          }
+          .quantity {
+            @include flex-grid-column(6);
+          }
+          .button {
+            @include flex-grid-column(6);
+          }
+        }
+        .msrp-price, .old-price, .special-price, .regular-price, .mwst-price, .skonto-price, .skontotax-price {
+          @include flex-grid-row(null, expand);
+          @include flex-grid-layout(2, 'span');
+          @include flex-align(center, middle);
+        }
+      }
+    }
+    .product-img-box {
+      .product-images {
+        ul {
+          @include flex-grid-row(null, expand);
+          @include flex-grid-layout(2, 'li');
+          li {
+            @include flex-grid-column(4, 1rem);
+            img {
+              @extend .thumbnail;
+            }
+          }
+          @include flex-align(center, middle);
+        }
+      }
+    }
+    .product-options {
+      dl {
+        @include flex-grid-row(null, expand);
+        .option {
+          @include flex-grid-column(12, 1rem);
+        }
+      }
+    }
+  }
+}
+
+//CMS
+.home-content {
+  @include flex-grid-row(null, 95%);
+  .home-text,
+  .home-hotline {
+    @include flex-grid-column(12);
+  }
+}
+
+//Cart
+.cart {
+  & > form {
+    @include flex-grid-row(nest);
+    .cart-table-wrapper {
+      @include flex-grid-column(12);
+    }
+  }
+  .cart-collaterals {
+    .col-collaterals {
+      @include flex-grid-row(nest);
+      .shipping,
+      #discount-coupon-form,
+      .totals {
+        @include flex-grid-column(12);
+      }
+    }
+  }
+}
+
+//Footer
+.footer-container {
+  .footer {
+    @include flex-grid-column(12);
+    @include flex-grid-row(null, expand);
+    @include flex-align(center, top);
+    .footer_payments,
+    .footer_shipping,
+    .footer_links,
+    .footer_service,
+    .footer_quality,
+    .footer_partner {
+      @include flex-grid-column(12);
+    }
+    .footer_manufactures {
+      @include flex-grid-column(12);
+    }
+    .footer_payments {
+      .payment-box-footer {
+        @include flex-grid-row();
+        li {
+          @include flex-grid-column(4, 1rem);
+        }
+        @include flex-align(center, middle);
+      }
+    }
+    .footer_shipping {
+      @extend .align-self-middle;
+    }
+    .footer_quality {
+      .quality-box-footer {
+        @include flex-grid-row();
+        li {
+          @include flex-grid-column(2, 1rem);
+        }
+        @include flex-align(center, middle);
+      }
+    }
+    .footer_partner {
+      ul.partner {
+        @include flex-grid-row(null, $grid-row-width, 12);
+        li {
+          @include flex-grid-column(4, 1rem);
+          @extend .text-center;
+        }
+        @include flex-align(center, middle);
+      }
+    }
+    .footer_links,
+    .footer_service,
+    .footer_manufactures {
+      ul {
+        @include menu-base;
+        flex-wrap: wrap;
+        @include flex-align(center, middle);
+      }
+    }
+  }
+}
+
+//Copyright
+.copyright-container {
+  .social {
+    @include flex-grid-column(12);
+    ul {
+      li {
+        @extend .text-center;
+      }
+      @include flex-align(center, middle);
+    }
+  }
+  .notification {
+    @include flex-grid-column(12);
+  }
+}
+
+//Cookie
+.cookie-container {
+  .message {
+    @include flex-grid-column(12);
+  }
+  .actions {
+    @include flex-grid-column(12);
+    .button-group {
+      @extend .expanded;
+    }
+  }
+}
+
+//Login
+.account-login {
+  form {
+    @include flex-grid-row(null, expand);
+    .page-title {
+      @include flex-grid-column(12);
+    }
+    .registered-users,
+    .new-users {
+      @include flex-grid-column(12);
+    }
+  }
+}
+
+.account-create {
+  form {
+    @include flex-grid-row(null, expand);
+    .page-title {
+      @include flex-grid-column(12);
+    }
+    .personal,
+    .login {
+      @include flex-grid-column(12);
+    }
+  }
+}
+
+//Checkout
+#checkout-step-login {
+  .col2-set {
+    @include flex-grid-row(nest);
+    .col-1,
+    .col-2 {
+      @include flex-grid-column(12);
+    }
+  }
+}
+
+@media screen and #{breakpoint(medium)} {
+
+  .col1-layout {
+    .col-main {
+      #catalog-filters {
+        @include flex-grid-column(2);
+      }
+      #fme_layered_container {
+        @include flex-grid-column(10);
+      }
+    }
+  }
+
+  .col2-left-layout,
+  .col2-right-layout {
+    .sidebar {
+      @include flex-grid-column(12);
+    }
+    .col-main {
+      @include flex-grid-column(12);
+    }
+  }
+
+  .col3-layout {
+    .col-wrapper {
+      .sidebar {
+        @include flex-grid-column(3);
+      }
+      .col-main {
+        @include flex-grid-column(6);
+      }
+    }
+  }
+
+  .header-container {
+    .header-top {
+      .brand {
+        margin-bottom: 0;
+        @include flex-grid-column(8);
+        @include flex-order(1);
+      }
+      .hotline {
+        margin-bottom: 0;
+        @include flex-grid-column(4);
+        @include flex-order(2);
+      }
+      .search {
+        @include flex-grid-column(12);
+        @include flex-order(3);
+      }
+    }
+    .header-bottom {
+      @include flex-align(center, middle);
+      .nav {
+        @include flex-grid-column(2);
+      }
+      .trusted {
+        @include flex-grid-column(4);
+      }
+      .account {
+        @include flex-grid-column(6);
+      }
+    }
+    .quick-access {
+      .brand {
+        @include flex-grid-column(4);
+      }
+      .top-search {
+        @include flex-grid-column(4);
+      }
+      .top-secure,
+      .top-shipping {
+        display: inline-block;
+        @include flex-grid-column(2);
+      }
+    }
+  }
+
+  .toolbar, .pager, .toolbar-3 {
+    @include flex-align(center, middle);
+    .amount, .limiter, .pages, .sort-by {
+      @include flex-grid-column(12, 1rem);
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .categories-grid {
+    @include flex-grid-layout(2, 'li');
+    @include flex-align(center, middle);
+  }
+
+  .products-grid, .search-grid {
+    @include flex-grid-layout(3, 'li');
+    @include breakpoint(retina) {
+      @include flex-grid-layout(2, 'li');
+    }
+    @include flex-align(center, top);
+  }
+
+  .manufacture-grid {
+    li {
+      @include flex-grid-column(4);
+    }
+  }
+
+  .search-autocomplete {
+    ul {
+      @include flex-align(center, top);
+      li {
+        @include flex-grid-column(4, 1rem);
+      }
+    }
+  }
+
+  .payment-grid {
+    @include flex-align(center, top);
+    .method {
+      @include flex-grid-column(6, 1rem);
+    }
+  }
+
+  .product-view {
+    .product-essential {
+      #product_addtocart_form {
+        .product-img-box {
+          @include flex-grid-column(12);
+          .product-images {
+            ul {
+              @include flex-grid-layout(8, 'li');
+              @include flex-align(center, middle);
+            }
+          }
+        }
+        .product-shop {
+          @include flex-grid-column(12);
+          .product-header {
+            .product-name {
+              @include flex-grid-column(9);
+            }
+            .product-brand {
+              @include flex-grid-column(3);
+            }
+          }
+        }
+      }
+      .product-options {
+        dl {
+          .option {
+            @include flex-grid-column(6, 1rem);
+          }
+        }
+      }
+    }
+    .product-collateral {
+      #customer-reviews {
+        dl,
+        .form-add {
+          @include flex-grid-column(12);
+        }
+      }
+    }
+  }
+
+  //Cart
+  .cart {
+    .cart-collaterals {
+      .col-collaterals {
+        .totals {
+          @include flex-grid-column(4);
+          @include flex-order(3);
+        }
+        .shipping {
+          @include flex-grid-column(4);
+          @include flex-order(1)
+        }
+        #discount-coupon-form {
+          @include flex-grid-column(4);
+          @include flex-order(2)
+        }
+      }
+    }
+  }
+
+  .account-login {
+    form {
+      .page-title {
+        @include flex-grid-column(12);
+      }
+      .registered-users,
+      .new-users {
+        @include flex-grid-column(6);
+      }
+    }
+  }
+
+  .account-create {
+    form {
+      .page-title {
+        @include flex-grid-column(12);
+      }
+      .personal,
+      .login {
+        @include flex-grid-column(6);
+      }
+    }
+  }
+
+  .cookie-container {
+    .notification {
+      .message {
+        @include flex-grid-column(6);
+      }
+      .actions {
+        @include flex-grid-column(6);
+      }
+    }
+  }
+
+  .footer-container {
+    .footer {
+      .footer_links,
+      .footer_service {
+        @include flex-grid-column(6);
+      }
+      .footer_payments,
+      .footer_shipping,
+      .footer_partner,
+      .footer_quality,
+      .footer_manufactures {
+        @include flex-grid-column(12);
+      }
+      .footer_payments {
+        .payment-box-footer {
+          @include flex-grid-row();
+          li {
+            @include flex-grid-column(4, 1rem);
+          }
+          @include flex-align(center, middle);
+        }
+      }
+      .footer_partner {
+        ul {
+          li {
+            @include flex-grid-column(2, 1rem);
+          }
+        }
+      }
+      .footer_links,
+      .footer_service,
+      .footer_manufactures {
+        ul {
+          @include menu-base;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}
+
+@media screen and #{breakpoint(large)} {
+
+  .col1-layout,
+  .col2-left-layout,
+  .col2-right-layout,
+  .col3-layout,
+  .breadcrumbs,
+  .footer-container {
+    @include flex-grid-row();
+  }
+
+  .col2-left-layout,
+  .col2-right-layout {
+    @include flex-grid-row();
+    .sidebar {
+      @include flex-grid-column(2);
+      @include breakpoint(retina) {
+        @include flex-grid-column(3);
+      }
+    }
+    .col-main {
+      @include flex-grid-column(10);
+      @include breakpoint(retina) {
+        @include flex-grid-column(9);
+      }
+    }
+  }
+
+  .header-container {
+    .header-top {
+      @include flex-align(center, middle);
+      width: 100%;
+      .brand {
+        @include flex-grid-column(3);
+        @include flex-order(1);
+      }
+      .hotline {
+        @include flex-grid-column(3);
+        @include flex-order(3);
+      }
+      .search {
+        @include flex-grid-column(6);
+        @include flex-order(2);
+        margin-bottom: 0;
+      }
+    }
+    .header-bottom {
+      @include flex-align(center, middle);
+      width: 100%;
+      .nav {
+        @include flex-grid-column(2);
+      }
+      .trusted {
+        @include flex-grid-column(6);
+      }
+      .account {
+        @include flex-grid-column(4);
+      }
+    }
+  }
+
+  .toolbar, .pager, .toolbar-3 {
+    @include flex-align(center, middle);
+    .amount, .limiter, .pages, .sort-by {
+      @include flex-grid-column(3);
+    }
+  }
+
+  .categories-grid {
+    @include flex-grid-layout(3, 'li');
+    @include flex-align(center, middle);
+  }
+
+  .products-grid, .search-grid {
+    @include flex-grid-layout(4, 'li');
+    @include breakpoint(retina) {
+      @include flex-grid-layout(3, 'li');
+    }
+    @include flex-align(center);
+  }
+
+  .manufacture-grid {
+    li {
+      @include flex-grid-column(3, 1rem);
+    }
+  }
+
+  .search-autocomplete {
+    ul {
+      @include flex-align(center, top);
+      li {
+        @include flex-grid-column(3, 1rem);
+      }
+    }
+  }
+
+  .payment-grid {
+    @include flex-align(center, top);
+    .method {
+      @include flex-grid-column(4, 1rem);
+    }
+  }
+
+  .product-view {
+    .product-essential {
+      #product_addtocart_form {
+        .product-img-box, .product-shop {
+          @include flex-grid-column(6);
+          .product-images {
+            ul {
+              @include flex-grid-layout(4, 'li');
+              @include flex-align(center, middle);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .products-list {
+    li {
+      > a {
+        @include flex-grid-column(4);
+      }
+      .product-shop {
+        @include flex-grid-column(8);
+      }
+    }
+  }
+
+  //Cart
+  .cart {
+    .cart-collaterals {
+      .col-collaterals {
+        @include flex-grid-row(nest);
+        .shipping,
+        #discount-coupon-form,
+        .totals {
+          @include flex-grid-column(4);
+        }
+      }
+    }
+  }
+
+  //Checkout
+  #checkout-step-login {
+    .col2-set {
+      @include flex-grid-row();
+      .col-1,
+      .col-2 {
+        @include flex-grid-column(6);
+      }
+    }
+  }
+
+  .footer-container {
+    .footer {
+      .footer_payments,
+      .footer_shipping,
+      .footer_links,
+      .footer_service,
+      .footer_quality {
+        @include flex-grid-column(4);
+      }
+      .footer_partner {
+        @include flex-grid-column(6);
+      }
+      .footer_manufactures {
+        @include flex-grid-column(12);
+      }
+      .footer_payments {
+        .payment-box-footer {
+          @include flex-grid-row();
+          li {
+            @include flex-grid-column(4, 1rem);
+          }
+          @include flex-align(center, middle);
+        }
+      }
+      .footer_quality {
+        .quality-box-footer {
+          @include flex-grid-row();
+          @include flex-grid-layout(2, 'li');
+          li {
+            @include flex-grid-column(2, 1rem);
+          }
+          @include flex-align(center, middle);
+        }
+      }
+      .footer_links,
+      .footer_service,
+      .footer_manufactures {
+        ul {
+          @include menu-base;
+          flex-wrap: wrap;
+        }
+      }
+      .footer_partner {
+        ul {
+          li {
+            @include flex-grid-column(3, 1rem);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and #{breakpoint(xlarge)} {
+
+  .categories-grid {
+    @include flex-grid-layout(4, 'li');
+    @include flex-align(center, middle);
+  }
+
+  .products-grid, .search-grid {
+    @include flex-grid-layout(4, 'li');
+    @include breakpoint(retina) {
+      @include flex-grid-layout(3, 'li');
+    }
+    @include flex-align(center);
+  }
+
+  .manufacture-grid {
+    li {
+      @include flex-grid-column(2, 1rem);
+    }
+  }
+}
